@@ -57,8 +57,9 @@
     </style>
 </head>
 <body>
-    <audio autoplay loop volume="0.5">
+    <audio id="backgroundAudio" loop volume="0.5">
         <source src="majesticamente.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
     </audio>
 
     <img src="https://media.tenor.com/oj_GdHiXiacAAAAM/cat-gentleman.gif">
@@ -66,6 +67,11 @@
     <button id="voltar" onclick="redirectParaHome()">acabar com a majestidade</button>
 
     <script>
+         window.onload = function() {
+            var audio = document.getElementById("backgroundAudio");
+            audio.play();
+        };
+        
         function redirectParaHome() {
             window.location.href = "index.html";
         }
