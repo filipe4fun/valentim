@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>☢️☢️☢️☢️☢️</title>    
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <style>
+        body {
+            background-color: #ff0000;
+            text-align: center;
+            font-family: 'Arial', sans-serif;
+            margin: 50px;
+            animation: flashAnimation 0.5s ease-in-out infinite alternate; /* Flashing animation */
+        }
+
+        h1 {
+            color: #000000;
+        }
+
+        #button-container {
+            margin-top: 20px;
+        }
+
+        #yes-button, #no-button {
+            padding: 15px 30px;
+            font-size: 18px;
+            cursor: pointer;
+            margin: 0 10px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        #yes-button {
+            background-color: #000000;
+            color: #fff200;
+        }
+
+
+        img {
+            top: 0; 
+            left: 0;
+            width: 550px; 
+            height: 400px; 
+        }
+        
+        @keyframes flashAnimation {
+            0% {
+                background-color: #ff0000;
+            }
+            100% {
+                background-color: #2a0000; 
+            }
+        }
+    </style>
+</head>
+<body>
+    <audio autoplay loop volume="0.5">
+        <source src="panico.mp3" type="audio/mp3">
+    </audio>
+
+    <img src="https://media.tenor.com/u8U5E9a_bCwAAAAM/sarlah-sarlahthecat.gif">
+    <h1>tas a gozar comigo pa?</h1>
+
+    <div id="button-container">
+        <button id="yes-button" onclick="redirectHome()">☢️ VOLTAR ☢️</button>
+    </div>
+
+    <script>
+        function redirectHome() {
+            window.location.href = "laurinha.html";
+        }
+    </script>
+
+</body>
+</html>
