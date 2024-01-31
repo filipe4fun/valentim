@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be My Valentine</title>
+    <style>
+        body {
+            background-color: #f7d9e3;
+            text-align: center;
+            font-family: 'Arial', sans-serif;
+            margin: 50px;
+        }
+
+        h1 {
+            color: #d9184a;
+        }
+
+        #button-container {
+            margin-top: 20px;
+        }
+
+        #yes-button, #no-button {
+            padding: 15px 30px;
+            font-size: 18px;
+            cursor: pointer;
+            margin: 0 10px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        #yes-button {
+            background-color: #ff4d6d;
+            color: white;
+        }
+
+        #no-button {
+            background-color: #d9184a;
+            color: white;
+        }
+
+        img {
+            top: 0;
+            left: 0;
+            width: 550px; /* Adjust the width as needed */
+            height: 400px; /* Adjust the height as needed */
+        }
+
+    </style>
+</head>
+<body>
+    <img src="https://media.tenor.com/ns27oDL6PPIAAAAM/cats-cat-with-flower.gif">
+    <h1>Queres passar o dia dos namorados comigo?</h1>
+
+    <div id="button-container">
+        <button id="yes-button" onclick="redirectToLovePage()">sim</button>
+        <button id="no-button" onmouseover="moveNoButton()">hmm, não</button>
+    </div>
+
+    <script>
+        function redirectToLovePage() {
+            window.location.href = "laurinha2.html";
+        }
+
+        function moveNoButton() {
+            var noButton = document.getElementById("no-button");
+            var maxX = window.innerWidth - noButton.offsetWidth;
+            var maxY = window.innerHeight - noButton.offsetHeight;
+
+            var randomX = Math.floor(Math.random() * maxX);
+            var randomY = Math.floor(Math.random() * maxY);
+
+            noButton.style.position = "absolute";
+            noButton.style.left = randomX + "px";
+            noButton.style.top = randomY + "px";
+        }
+    </script>
+
+</body>
+</html>
