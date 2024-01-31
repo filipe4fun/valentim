@@ -56,15 +56,17 @@
     <h1>Queres passar o dia dos namorados comigo?</h1>
 
     <div id="button-container">
-        <button id="yes-button" onclick="redirectToLovePage()">sim</button>
+        <button id="yes-button" onclick="redirectNegocioConcluido()">sim</button>
         <button id="no-button" onmouseover="moveNoButton()">hmm, não</button>
     </div>
 
     <script>
-        function redirectToLovePage() {
+        var hoverCounter = parseInt(sessionStorage.getItem('hoverCounter')) || 0;
+
+        function redirectNegocioConcluido() {
             window.location.href = "laurinha2.html";
         }
-
+        
         function moveNoButton() {
             var noButton = document.getElementById("no-button");
             var maxX = window.innerWidth - noButton.offsetWidth;
@@ -77,12 +79,13 @@
             noButton.style.left = randomX + "px";
             noButton.style.top = randomY + "px";
 
-            var probability = Math.random(); 
-            if (probability < 0.5) { 
-                window.location.href = "laurinha2.html";
+            hoverCounter++;
+            if (hoverCounter % 4 === 0) {
+                window.location.href = "angy.html";        
             }
+            
+            sessionStorage.setItem('hoverCounter', hoverCounter.toString());
         }
-
     </script>
 
 </body>
